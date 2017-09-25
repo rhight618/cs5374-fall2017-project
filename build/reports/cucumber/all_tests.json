@@ -1,0 +1,1486 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "line": 20,
+        "name": "Users can view restricted resources for which they are authorised",
+        "description": "",
+        "id": "authorisation-and-access-control;users-can-view-restricted-resources-for-which-they-are-authorised;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 8629259287,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "a new browser or client instance",
+            "match": {
+              "location": "WebApplicationSteps.createAppForAnyClient()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 257812,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "the client/browser is configured to use an intercepting proxy",
+            "match": {
+              "location": "WebApplicationSteps.enableLoggingDriver()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 3962597137,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "the proxy logs are cleared",
+            "match": {
+              "location": "WebApplicationSteps.clearProxy()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 4122228777,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "the login page",
+            "match": {
+              "location": "WebApplicationSteps.openLoginPageFromGiven()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 4183698,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "the username bob is used",
+            "match": {
+              "arguments": [
+                {
+                  "val": "bob",
+                  "offset": 13
+                }
+              ],
+              "location": "WebApplicationSteps.setUsernameFromExamples(String)"
+            },
+            "matchedColumns": [
+              1
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 229896,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "the password password is used",
+            "match": {
+              "arguments": [
+                {
+                  "val": "password",
+                  "offset": 13
+                }
+              ],
+              "location": "WebApplicationSteps.setCredentialsFromExamples(String)"
+            },
+            "matchedColumns": [
+              2
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 983052553,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "the user logs in",
+            "match": {
+              "location": "WebApplicationSteps.loginWithSetCredentials()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1089503067,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "the proxy logs are cleared",
+            "match": {
+              "location": "WebApplicationSteps.clearProxy()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 132601,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "the HTTP requests and responses are recorded",
+            "match": {
+              "location": "WebApplicationSteps.noActionForRecordingHttpRequestResponses()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 212243,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "they access the restricted resource: viewBobsProfile",
+            "match": {
+              "arguments": [
+                {
+                  "val": "viewBobsProfile",
+                  "offset": 37
+                }
+              ],
+              "location": "WebApplicationSteps.setMethodName(String)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2813396621,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "the string: Robert should be present in one of the HTTP responses",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Robert",
+                  "offset": 12
+                }
+              ],
+              "location": "WebApplicationSteps.checkAccessToResource(String)"
+            },
+            "matchedColumns": [
+              3
+            ],
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 1,
+            "name": "@authorisation"
+          },
+          {
+            "line": 5,
+            "name": "@iriusrisk-authorised_resources"
+          }
+        ]
+      },
+      {
+        "line": 21,
+        "name": "Users can view restricted resources for which they are authorised",
+        "description": "",
+        "id": "authorisation-and-access-control;users-can-view-restricted-resources-for-which-they-are-authorised;;3",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 6250711,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "a new browser or client instance",
+            "match": {
+              "location": "WebApplicationSteps.createAppForAnyClient()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 520550,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "the client/browser is configured to use an intercepting proxy",
+            "match": {
+              "location": "WebApplicationSteps.enableLoggingDriver()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1505259079,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "the proxy logs are cleared",
+            "match": {
+              "location": "WebApplicationSteps.clearProxy()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1108829940,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "the login page",
+            "match": {
+              "location": "WebApplicationSteps.openLoginPageFromGiven()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 356749,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "the username alice is used",
+            "match": {
+              "arguments": [
+                {
+                  "val": "alice",
+                  "offset": 13
+                }
+              ],
+              "location": "WebApplicationSteps.setUsernameFromExamples(String)"
+            },
+            "matchedColumns": [
+              1
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 487298,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "the password password is used",
+            "match": {
+              "arguments": [
+                {
+                  "val": "password",
+                  "offset": 13
+                }
+              ],
+              "location": "WebApplicationSteps.setCredentialsFromExamples(String)"
+            },
+            "matchedColumns": [
+              2
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1146390036,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "the user logs in",
+            "match": {
+              "location": "WebApplicationSteps.loginWithSetCredentials()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1854033219,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "the proxy logs are cleared",
+            "match": {
+              "location": "WebApplicationSteps.clearProxy()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 263149,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "the HTTP requests and responses are recorded",
+            "match": {
+              "location": "WebApplicationSteps.noActionForRecordingHttpRequestResponses()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 360444,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "they access the restricted resource: viewAlicesProfile",
+            "match": {
+              "arguments": [
+                {
+                  "val": "viewAlicesProfile",
+                  "offset": 37
+                }
+              ],
+              "location": "WebApplicationSteps.setMethodName(String)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1921763073,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "the string: alice@continuumsecurity.net should be present in one of the HTTP responses",
+            "match": {
+              "arguments": [
+                {
+                  "val": "alice@continuumsecurity.net",
+                  "offset": 12
+                }
+              ],
+              "location": "WebApplicationSteps.checkAccessToResource(String)"
+            },
+            "matchedColumns": [
+              3
+            ],
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 1,
+            "name": "@authorisation"
+          },
+          {
+            "line": 5,
+            "name": "@iriusrisk-authorised_resources"
+          }
+        ]
+      },
+      {
+        "line": 22,
+        "name": "Users can view restricted resources for which they are authorised",
+        "description": "",
+        "id": "authorisation-and-access-control;users-can-view-restricted-resources-for-which-they-are-authorised;;4",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 1084206,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "a new browser or client instance",
+            "match": {
+              "location": "WebApplicationSteps.createAppForAnyClient()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 383434,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "the client/browser is configured to use an intercepting proxy",
+            "match": {
+              "location": "WebApplicationSteps.enableLoggingDriver()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1143980232,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "the proxy logs are cleared",
+            "match": {
+              "location": "WebApplicationSteps.clearProxy()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1442067620,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "the login page",
+            "match": {
+              "location": "WebApplicationSteps.openLoginPageFromGiven()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 347718,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "the username admin is used",
+            "match": {
+              "arguments": [
+                {
+                  "val": "admin",
+                  "offset": 13
+                }
+              ],
+              "location": "WebApplicationSteps.setUsernameFromExamples(String)"
+            },
+            "matchedColumns": [
+              1
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 358802,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "the password password is used",
+            "match": {
+              "arguments": [
+                {
+                  "val": "password",
+                  "offset": 13
+                }
+              ],
+              "location": "WebApplicationSteps.setCredentialsFromExamples(String)"
+            },
+            "matchedColumns": [
+              2
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1232054660,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "the user logs in",
+            "match": {
+              "location": "WebApplicationSteps.loginWithSetCredentials()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1157357722,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "the proxy logs are cleared",
+            "match": {
+              "location": "WebApplicationSteps.clearProxy()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 259865,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "the HTTP requests and responses are recorded",
+            "match": {
+              "location": "WebApplicationSteps.noActionForRecordingHttpRequestResponses()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 433108,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "they access the restricted resource: viewAllUsers",
+            "match": {
+              "arguments": [
+                {
+                  "val": "viewAllUsers",
+                  "offset": 37
+                }
+              ],
+              "location": "WebApplicationSteps.setMethodName(String)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1166817947,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "the string: User List should be present in one of the HTTP responses",
+            "match": {
+              "arguments": [
+                {
+                  "val": "User List",
+                  "offset": 12
+                }
+              ],
+              "location": "WebApplicationSteps.checkAccessToResource(String)"
+            },
+            "matchedColumns": [
+              3
+            ],
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 1,
+            "name": "@authorisation"
+          },
+          {
+            "line": 5,
+            "name": "@iriusrisk-authorised_resources"
+          }
+        ]
+      },
+      {
+        "line": 37,
+        "name": "Users must not be able to view resources for which they are not authorised",
+        "description": "",
+        "id": "authorisation-and-access-control;users-must-not-be-able-to-view-resources-for-which-they-are-not-authorised;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 508234,
+              "status": "passed"
+            },
+            "line": 27,
+            "name": "the access control map for authorised users has been populated",
+            "match": {
+              "location": "WebApplicationSteps.checkIfMapPopulated()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1113764,
+              "status": "passed"
+            },
+            "line": 28,
+            "name": "a new browser or client instance",
+            "match": {
+              "location": "WebApplicationSteps.createAppForAnyClient()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 338275,
+              "status": "passed"
+            },
+            "line": 29,
+            "name": "the username alice is used",
+            "match": {
+              "arguments": [
+                {
+                  "val": "alice",
+                  "offset": 13
+                }
+              ],
+              "location": "WebApplicationSteps.setUsernameFromExamples(String)"
+            },
+            "matchedColumns": [
+              1
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 305433,
+              "status": "passed"
+            },
+            "line": 30,
+            "name": "the password password is used",
+            "match": {
+              "arguments": [
+                {
+                  "val": "password",
+                  "offset": 13
+                }
+              ],
+              "location": "WebApplicationSteps.setCredentialsFromExamples(String)"
+            },
+            "matchedColumns": [
+              2
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1720882325,
+              "status": "passed"
+            },
+            "line": 31,
+            "name": "the login page",
+            "match": {
+              "location": "WebApplicationSteps.openLoginPageFromGiven()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 992163006,
+              "status": "passed"
+            },
+            "line": 32,
+            "name": "the user logs in",
+            "match": {
+              "location": "WebApplicationSteps.loginWithSetCredentials()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 349771,
+              "status": "passed"
+            },
+            "line": 33,
+            "name": "the previously recorded HTTP Requests for viewBobsProfile are replayed using the current session ID",
+            "match": {
+              "arguments": [
+                {
+                  "val": "viewBobsProfile",
+                  "offset": 42
+                }
+              ],
+              "location": "WebApplicationSteps.areReplayedUsingCSessID(String)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 4942853988,
+              "error_message": "java.lang.AssertionError: \nExpected: \u003cfalse\u003e\n     but: was \u003ctrue\u003e\r\n\tat org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)\r\n\tat org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:8)\r\n\tat net.continuumsecurity.steps.WebApplicationSteps.checkAccessUsingCookieMethod(WebApplicationSteps.java:491)\r\n\tat net.continuumsecurity.steps.WebApplicationSteps.checkNoAccessToResource(WebApplicationSteps.java:446)\r\n\tat ✽.Then the string: Robert should not be present in any of the HTTP responses(authorisation.feature:34)\r\n",
+              "status": "failed"
+            },
+            "line": 34,
+            "name": "the string: Robert should not be present in any of the HTTP responses",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Robert",
+                  "offset": 12
+                }
+              ],
+              "location": "WebApplicationSteps.checkNoAccessToResource(String)"
+            },
+            "matchedColumns": [
+              3
+            ],
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 25,
+            "name": "@iriusrisk-cwe-639"
+          },
+          {
+            "line": 1,
+            "name": "@authorisation"
+          }
+        ]
+      },
+      {
+        "line": 38,
+        "name": "Users must not be able to view resources for which they are not authorised",
+        "description": "",
+        "id": "authorisation-and-access-control;users-must-not-be-able-to-view-resources-for-which-they-are-not-authorised;;3",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 762762,
+              "status": "passed"
+            },
+            "line": 27,
+            "name": "the access control map for authorised users has been populated",
+            "match": {
+              "location": "WebApplicationSteps.checkIfMapPopulated()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1242670,
+              "status": "passed"
+            },
+            "line": 28,
+            "name": "a new browser or client instance",
+            "match": {
+              "location": "WebApplicationSteps.createAppForAnyClient()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 351824,
+              "status": "passed"
+            },
+            "line": 29,
+            "name": "the username bob is used",
+            "match": {
+              "arguments": [
+                {
+                  "val": "bob",
+                  "offset": 13
+                }
+              ],
+              "location": "WebApplicationSteps.setUsernameFromExamples(String)"
+            },
+            "matchedColumns": [
+              1
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 295170,
+              "status": "passed"
+            },
+            "line": 30,
+            "name": "the password password is used",
+            "match": {
+              "arguments": [
+                {
+                  "val": "password",
+                  "offset": 13
+                }
+              ],
+              "location": "WebApplicationSteps.setCredentialsFromExamples(String)"
+            },
+            "matchedColumns": [
+              2
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1177515095,
+              "status": "passed"
+            },
+            "line": 31,
+            "name": "the login page",
+            "match": {
+              "location": "WebApplicationSteps.openLoginPageFromGiven()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 747057227,
+              "status": "passed"
+            },
+            "line": 32,
+            "name": "the user logs in",
+            "match": {
+              "location": "WebApplicationSteps.loginWithSetCredentials()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 359213,
+              "status": "passed"
+            },
+            "line": 33,
+            "name": "the previously recorded HTTP Requests for viewAlicesProfile are replayed using the current session ID",
+            "match": {
+              "arguments": [
+                {
+                  "val": "viewAlicesProfile",
+                  "offset": 42
+                }
+              ],
+              "location": "WebApplicationSteps.areReplayedUsingCSessID(String)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 4435491360,
+              "error_message": "java.lang.AssertionError: \nExpected: \u003cfalse\u003e\n     but: was \u003ctrue\u003e\r\n\tat org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)\r\n\tat org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:8)\r\n\tat net.continuumsecurity.steps.WebApplicationSteps.checkAccessUsingCookieMethod(WebApplicationSteps.java:491)\r\n\tat net.continuumsecurity.steps.WebApplicationSteps.checkNoAccessToResource(WebApplicationSteps.java:446)\r\n\tat ✽.Then the string: alice@continuumsecurity.net should not be present in any of the HTTP responses(authorisation.feature:34)\r\n",
+              "status": "failed"
+            },
+            "line": 34,
+            "name": "the string: alice@continuumsecurity.net should not be present in any of the HTTP responses",
+            "match": {
+              "arguments": [
+                {
+                  "val": "alice@continuumsecurity.net",
+                  "offset": 12
+                }
+              ],
+              "location": "WebApplicationSteps.checkNoAccessToResource(String)"
+            },
+            "matchedColumns": [
+              3
+            ],
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 25,
+            "name": "@iriusrisk-cwe-639"
+          },
+          {
+            "line": 1,
+            "name": "@authorisation"
+          }
+        ]
+      },
+      {
+        "line": 39,
+        "name": "Users must not be able to view resources for which they are not authorised",
+        "description": "",
+        "id": "authorisation-and-access-control;users-must-not-be-able-to-view-resources-for-which-they-are-not-authorised;;4",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 559551,
+              "status": "passed"
+            },
+            "line": 27,
+            "name": "the access control map for authorised users has been populated",
+            "match": {
+              "location": "WebApplicationSteps.checkIfMapPopulated()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1410577,
+              "status": "passed"
+            },
+            "line": 28,
+            "name": "a new browser or client instance",
+            "match": {
+              "location": "WebApplicationSteps.createAppForAnyClient()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 349770,
+              "status": "passed"
+            },
+            "line": 29,
+            "name": "the username alice is used",
+            "match": {
+              "arguments": [
+                {
+                  "val": "alice",
+                  "offset": 13
+                }
+              ],
+              "location": "WebApplicationSteps.setUsernameFromExamples(String)"
+            },
+            "matchedColumns": [
+              1
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 315286,
+              "status": "passed"
+            },
+            "line": 30,
+            "name": "the password password is used",
+            "match": {
+              "arguments": [
+                {
+                  "val": "password",
+                  "offset": 13
+                }
+              ],
+              "location": "WebApplicationSteps.setCredentialsFromExamples(String)"
+            },
+            "matchedColumns": [
+              2
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1477760221,
+              "status": "passed"
+            },
+            "line": 31,
+            "name": "the login page",
+            "match": {
+              "location": "WebApplicationSteps.openLoginPageFromGiven()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 830436848,
+              "status": "passed"
+            },
+            "line": 32,
+            "name": "the user logs in",
+            "match": {
+              "location": "WebApplicationSteps.loginWithSetCredentials()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 392055,
+              "status": "passed"
+            },
+            "line": 33,
+            "name": "the previously recorded HTTP Requests for viewAllUsers are replayed using the current session ID",
+            "match": {
+              "arguments": [
+                {
+                  "val": "viewAllUsers",
+                  "offset": 42
+                }
+              ],
+              "location": "WebApplicationSteps.areReplayedUsingCSessID(String)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1656084877,
+              "status": "passed"
+            },
+            "line": 34,
+            "name": "the string: User List should not be present in any of the HTTP responses",
+            "match": {
+              "arguments": [
+                {
+                  "val": "User List",
+                  "offset": 12
+                }
+              ],
+              "location": "WebApplicationSteps.checkNoAccessToResource(String)"
+            },
+            "matchedColumns": [
+              3
+            ],
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 25,
+            "name": "@iriusrisk-cwe-639"
+          },
+          {
+            "line": 1,
+            "name": "@authorisation"
+          }
+        ]
+      },
+      {
+        "line": 40,
+        "name": "Users must not be able to view resources for which they are not authorised",
+        "description": "",
+        "id": "authorisation-and-access-control;users-must-not-be-able-to-view-resources-for-which-they-are-not-authorised;;5",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 508234,
+              "status": "passed"
+            },
+            "line": 27,
+            "name": "the access control map for authorised users has been populated",
+            "match": {
+              "location": "WebApplicationSteps.checkIfMapPopulated()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1141270,
+              "status": "passed"
+            },
+            "line": 28,
+            "name": "a new browser or client instance",
+            "match": {
+              "location": "WebApplicationSteps.createAppForAnyClient()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 272181,
+              "status": "passed"
+            },
+            "line": 29,
+            "name": "the username bob is used",
+            "match": {
+              "arguments": [
+                {
+                  "val": "bob",
+                  "offset": 13
+                }
+              ],
+              "location": "WebApplicationSteps.setUsernameFromExamples(String)"
+            },
+            "matchedColumns": [
+              1
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 261917,
+              "status": "passed"
+            },
+            "line": 30,
+            "name": "the password password is used",
+            "match": {
+              "arguments": [
+                {
+                  "val": "password",
+                  "offset": 13
+                }
+              ],
+              "location": "WebApplicationSteps.setCredentialsFromExamples(String)"
+            },
+            "matchedColumns": [
+              2
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1158771583,
+              "status": "passed"
+            },
+            "line": 31,
+            "name": "the login page",
+            "match": {
+              "location": "WebApplicationSteps.openLoginPageFromGiven()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 825076163,
+              "status": "passed"
+            },
+            "line": 32,
+            "name": "the user logs in",
+            "match": {
+              "location": "WebApplicationSteps.loginWithSetCredentials()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1413040,
+              "status": "passed"
+            },
+            "line": 33,
+            "name": "the previously recorded HTTP Requests for viewAllUsers are replayed using the current session ID",
+            "match": {
+              "arguments": [
+                {
+                  "val": "viewAllUsers",
+                  "offset": 42
+                }
+              ],
+              "location": "WebApplicationSteps.areReplayedUsingCSessID(String)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1776485981,
+              "status": "passed"
+            },
+            "line": 34,
+            "name": "the string: User List should not be present in any of the HTTP responses",
+            "match": {
+              "arguments": [
+                {
+                  "val": "User List",
+                  "offset": 12
+                }
+              ],
+              "location": "WebApplicationSteps.checkNoAccessToResource(String)"
+            },
+            "matchedColumns": [
+              3
+            ],
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 25,
+            "name": "@iriusrisk-cwe-639"
+          },
+          {
+            "line": 1,
+            "name": "@authorisation"
+          }
+        ]
+      },
+      {
+        "line": 51,
+        "name": "Un-authenticated users should not be able to view restricted resources",
+        "description": "",
+        "id": "authorisation-and-access-control;un-authenticated-users-should-not-be-able-to-view-restricted-resources;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 789036,
+              "status": "passed"
+            },
+            "line": 44,
+            "name": "the access control map for authorised users has been populated",
+            "match": {
+              "location": "WebApplicationSteps.checkIfMapPopulated()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1127312,
+              "status": "passed"
+            },
+            "line": 45,
+            "name": "a new browser or client instance",
+            "match": {
+              "location": "WebApplicationSteps.createAppForAnyClient()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1227997404,
+              "status": "passed"
+            },
+            "line": 46,
+            "name": "the login page",
+            "match": {
+              "location": "WebApplicationSteps.openLoginPageFromGiven()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 280802,
+              "status": "passed"
+            },
+            "line": 47,
+            "name": "the previously recorded HTTP Requests for viewBobsProfile are replayed using the current session ID",
+            "match": {
+              "arguments": [
+                {
+                  "val": "viewBobsProfile",
+                  "offset": 42
+                }
+              ],
+              "location": "WebApplicationSteps.areReplayedUsingCSessID(String)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 5110596445,
+              "status": "passed"
+            },
+            "line": 48,
+            "name": "the string: Robert should not be present in any of the HTTP responses",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Robert",
+                  "offset": 12
+                }
+              ],
+              "location": "WebApplicationSteps.checkNoAccessToResource(String)"
+            },
+            "matchedColumns": [
+              1
+            ],
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 42,
+            "name": "@iriusrisk-cwe-306"
+          },
+          {
+            "line": 1,
+            "name": "@authorisation"
+          }
+        ]
+      },
+      {
+        "line": 52,
+        "name": "Un-authenticated users should not be able to view restricted resources",
+        "description": "",
+        "id": "authorisation-and-access-control;un-authenticated-users-should-not-be-able-to-view-restricted-resources;;3",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 466771,
+              "status": "passed"
+            },
+            "line": 44,
+            "name": "the access control map for authorised users has been populated",
+            "match": {
+              "location": "WebApplicationSteps.checkIfMapPopulated()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 2334266,
+              "status": "passed"
+            },
+            "line": 45,
+            "name": "a new browser or client instance",
+            "match": {
+              "location": "WebApplicationSteps.createAppForAnyClient()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1299578428,
+              "status": "passed"
+            },
+            "line": 46,
+            "name": "the login page",
+            "match": {
+              "location": "WebApplicationSteps.openLoginPageFromGiven()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 300917,
+              "status": "passed"
+            },
+            "line": 47,
+            "name": "the previously recorded HTTP Requests for viewAlicesProfile are replayed using the current session ID",
+            "match": {
+              "arguments": [
+                {
+                  "val": "viewAlicesProfile",
+                  "offset": 42
+                }
+              ],
+              "location": "WebApplicationSteps.areReplayedUsingCSessID(String)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 5010282513,
+              "status": "passed"
+            },
+            "line": 48,
+            "name": "the string: alice@continuumsecurity.net should not be present in any of the HTTP responses",
+            "match": {
+              "arguments": [
+                {
+                  "val": "alice@continuumsecurity.net",
+                  "offset": 12
+                }
+              ],
+              "location": "WebApplicationSteps.checkNoAccessToResource(String)"
+            },
+            "matchedColumns": [
+              1
+            ],
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 42,
+            "name": "@iriusrisk-cwe-306"
+          },
+          {
+            "line": 1,
+            "name": "@authorisation"
+          }
+        ]
+      },
+      {
+        "line": 53,
+        "name": "Un-authenticated users should not be able to view restricted resources",
+        "description": "",
+        "id": "authorisation-and-access-control;un-authenticated-users-should-not-be-able-to-view-restricted-resources;;4",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 464308,
+              "status": "passed"
+            },
+            "line": 44,
+            "name": "the access control map for authorised users has been populated",
+            "match": {
+              "location": "WebApplicationSteps.checkIfMapPopulated()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1092828,
+              "status": "passed"
+            },
+            "line": 45,
+            "name": "a new browser or client instance",
+            "match": {
+              "location": "WebApplicationSteps.createAppForAnyClient()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1182626177,
+              "status": "passed"
+            },
+            "line": 46,
+            "name": "the login page",
+            "match": {
+              "location": "WebApplicationSteps.openLoginPageFromGiven()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 250833,
+              "status": "passed"
+            },
+            "line": 47,
+            "name": "the previously recorded HTTP Requests for viewAllUsers are replayed using the current session ID",
+            "match": {
+              "arguments": [
+                {
+                  "val": "viewAllUsers",
+                  "offset": 42
+                }
+              ],
+              "location": "WebApplicationSteps.areReplayedUsingCSessID(String)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1916411420,
+              "status": "passed"
+            },
+            "line": 48,
+            "name": "the string: User List should not be present in any of the HTTP responses",
+            "match": {
+              "arguments": [
+                {
+                  "val": "User List",
+                  "offset": 12
+                }
+              ],
+              "location": "WebApplicationSteps.checkNoAccessToResource(String)"
+            },
+            "matchedColumns": [
+              1
+            ],
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 42,
+            "name": "@iriusrisk-cwe-306"
+          },
+          {
+            "line": 1,
+            "name": "@authorisation"
+          }
+        ]
+      }
+    ],
+    "name": "Authorisation and Access Control",
+    "description": "Verify that the access control model is enforced so that only the authorised users have access to their own data",
+    "id": "authorisation-and-access-control",
+    "keyword": "Feature",
+    "uri": "authorisation.feature",
+    "tags": [
+      {
+        "line": 1,
+        "name": "@authorisation"
+      }
+    ]
+  }
+]
