@@ -12,6 +12,7 @@ import net.continuumsecurity.web.WebApplication;
 
 public class WebGoatApplication extends WebApplication implements ILogin, ILogout, INavigable {
 
+	
 	public WebGoatApplication() {
 		super();
 		// TODO Auto-generated constructor stub
@@ -27,28 +28,46 @@ public class WebGoatApplication extends WebApplication implements ILogin, ILogou
 	@Override
 	public void login(Credentials credentials) {
         UserPassCredentials creds = new UserPassCredentials(credentials);
-        driver.findElement(By.id("exampleInputEmail1")).clear();
-        driver.findElement(By.id("exampleInputEmail1")).sendKeys(creds.getUsername());
-        driver.findElement(By.id("exampleInputPassword1")).clear();
-        driver.findElement(By.id("exampleInputPassword1")).sendKeys(creds.getPassword());
-        driver.findElement(By.className("btn btn-large btn-primary")).click();
+        driver.findElement(By.id(getElementIDByKey("ID_FIELD"))).clear();
+        driver.findElement(By.id(getElementIDByKey("ID_FIELD"))).sendKeys(creds.getUsername());
+        driver.findElement(By.id(getElementIDByKey("PW_FIELD"))).clear();
+        driver.findElement(By.id(getElementIDByKey("PW_FIELD"))).sendKeys(creds.getPassword());
+        driver.findElement(By.cssSelector(getElementIDByKey("SIGN_IN_BUTTON"))).click();;
+
 
 	}
 
 	@Override
 	public void openLoginPage() {
         driver.get(Config.getInstance().getBaseUrl() + "login.mvc");
-        findAndWaitForElement(By.id("exampleInputEmail1"));
+        findAndWaitForElement(By.id(getElementIDByKey("PW_FIELD")));
 	}
 
 	@Override
 	public boolean isLoggedIn() {
-        driver.get(Config.getInstance().getBaseUrl()+"start.mvc");
-        if (driver.getPageSource().contains("lesson-title-wrapper")) {
-            return true;
-        } else {
+        if (driver.getPageSource().contains("Invalid username and password!")) {
             return false;
+        } else {
+            return true;
         }
+	}
+	
+	public String getElementIDByKey(String key){
+		
+		String ID = "";
+		
+		switch (key) {
+        case "ID_FIELD":  ID = "exampleInputEmail1";
+                 break;
+        case "PW_FIELD":  ID = "exampleInputPassword1";
+                 break;
+        case "SIGN_IN_BUTTON":  ID = "button[class*='btn']";
+                 break;
+        default: ID = "";
+                 break;
+    }
+		
+		return ID;
 	}
 
 }

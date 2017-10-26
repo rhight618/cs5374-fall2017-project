@@ -1,4 +1,4 @@
-package net.continuumsecurity.junit;
+package com.cs.project.webgoat.junit;
 
 import cucumber.api.CucumberOptions;
 import cucumber.api.junit.Cucumber;
@@ -13,8 +13,8 @@ import org.junit.runner.RunWith;
                 "src/test/resources/webGoatFeatures/"
         },
         format = {"pretty", "html:build/reports/cucumber/html", "json:build/reports/cucumber/all_tests.json", "junit:build/reports/junit/all_tests.xml"},
-        glue = {"net.continuumsecurity.steps"},
-        tags = {"~@skip", "login"}
+        glue = {"com.cs.project.webgoat.steps"},
+        tags = {"~@skip", "@login","@unit_tests"}
 )
 public class WebGoatSecurityTest {
 
