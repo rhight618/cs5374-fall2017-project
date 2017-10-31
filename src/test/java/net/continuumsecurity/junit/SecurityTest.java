@@ -14,7 +14,7 @@ import org.junit.runner.RunWith;
         },
         format = {"pretty", "html:build/reports/cucumber/html", "json:build/reports/cucumber/all_tests.json", "junit:build/reports/junit/all_tests.xml"},
         glue = {"net.continuumsecurity.steps"},
-        tags = {"~@skip","~@app_scan","~@cors","~@authentication","@authorisation","~@data_security","~@host_config","~@http_headers","~@nessus_scan","~@passive_scan","~@session_management","~@ssl"}
+        tags = {"~@skip","~@app_scan","~@cors","~@authentication","~@authorisation","~@data_security","~@host_config","~@http_headers","~@nessus_scan","~@passive_scan","~@session_management","~@ssl"}
 )
 public class SecurityTest {
 

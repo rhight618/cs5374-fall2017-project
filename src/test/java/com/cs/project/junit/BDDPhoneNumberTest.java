@@ -12,7 +12,7 @@ import cucumber.api.junit.Cucumber;
         },
         format = {"pretty", "html:build/reports/cucumber/html", "json:build/reports/cucumber/all_tests.json", "junit:build/reports/junit/all_tests.xml"},
         glue = {"com.cs.project.phonenumber.steps"},
-        tags = {"~@skip", "@phoneNumber"}
+        tags = {"~@skip", "~@phoneNumber"}
 )
 
 public class BDDPhoneNumberTest {

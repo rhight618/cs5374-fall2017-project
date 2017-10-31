@@ -32,7 +32,7 @@
 <level>LOW</level>
 </p40014>
 <p40018>
-<enabled>true</enabled>
+<enabled>false</enabled>
 <strength>HIGH</strength>
 <level>LOW</level>
 </p40018>

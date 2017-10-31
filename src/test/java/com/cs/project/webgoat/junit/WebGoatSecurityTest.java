@@ -14,7 +14,7 @@ import org.junit.runner.RunWith;
         },
         format = {"pretty", "html:build/reports/cucumber/html", "json:build/reports/cucumber/all_tests.json", "junit:build/reports/junit/all_tests.xml"},
         glue = {"com.cs.project.webgoat.steps"},
-        tags = {"~@skip", "@login","@unit_tests"}
+        tags = {"~@skip", "@webGoatTests"}
 )
 public class WebGoatSecurityTest {
 
