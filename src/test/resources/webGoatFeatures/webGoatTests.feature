@@ -30,10 +30,21 @@ Feature: WebGoat Testing Feature
     Then the output is button[class*='btn']
     
  @security_scanning_test
-   Scenario: Security Test: passive and active scan
+   Scenario: Security Scan: passive and active scan
     Given a new scanning session
     And a scanner with all policies disabled
     And all existing alerts are deleted
     And the application is navigated
     And the application is spidered
+    
+ @security_sql_inject_test
+   Scenario: The application should not contain SQL injection vulnerabilities
+    And the SQL-Injection policy is enabled
+    And the attack strength is set to High
+    And the alert threshold is set to Low
+    When the scanner is run
+    And the following false positives are removed
+      |url                    |parameter          |cweId      |wascId   |
+    And the XML report is written to the file build/zap/sql_injection.xml
+    Then no Medium or higher risk vulnerabilities should be present
   

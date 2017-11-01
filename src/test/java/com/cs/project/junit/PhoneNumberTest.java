@@ -2,10 +2,12 @@ package com.cs.project.junit;
 
 import static org.junit.Assert.*;
 
+import org.junit.Ignore;
 import org.junit.Test;
 
 import com.cs.project.service.web.CheckNumberService;
 
+@Ignore
 public class PhoneNumberTest {
 	
 	@Test
