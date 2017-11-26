@@ -9,7 +9,7 @@
     -->
     
     <defaultDriver>chrome</defaultDriver>
-    <defaultDriver path="src/test/resources/drivers/chromedriver.exe">Chrome</defaultDriver>
+    <defaultDriver path="src/test/resources/drivers/chromedriver-linux64">Chrome</defaultDriver>
 
     <!-- Base URL of the application to test -->
     <baseUrl>http://localhost:8081/WebGoat/</baseUrl>
@@ -62,7 +62,7 @@
     </proxy>
 -->
 
-    <zapPath>zap/zap.bat</zapPath>
+    <zapPath>zap/zap.sh</zapPath>
 
 
 </web-app>
