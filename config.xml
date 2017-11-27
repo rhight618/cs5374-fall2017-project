@@ -32,7 +32,7 @@
     <defaultPassword>guest</defaultPassword>
 
     <scanner>
-        <ignoreUrl>.*logout.*</ignoreUrl>
+        <ignoreUrl>^(?:(?!http:\/\/localhost:8081).*).$</ignoreUrl>
         <spiderUrl>baseUrl</spiderUrl>
     </scanner>
 
