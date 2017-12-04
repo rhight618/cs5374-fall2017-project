@@ -47,4 +47,15 @@ Feature: WebGoat Testing Feature
       |url                    |parameter          |cweId      |wascId   |
     And the XML report is written to the file build/zap/sql_injection.xml
     Then no Medium or higher risk vulnerabilities should be present
+    
+ @cross_site_scripting_test
+  Scenario: The application should not contain Cross Site Scripting vulnerabilities
+    And the Cross-Site-Scripting policy is enabled
+    And the attack strength is set to High
+    And the alert threshold is set to Low
+    When the scanner is run
+    And the following false positives are removed
+      |url                    |parameter          |cweId      |wascId   |
+    And the XML report is written to the file build/zap/xss.xml
+    Then no Medium or higher risk vulnerabilities should be present
   
